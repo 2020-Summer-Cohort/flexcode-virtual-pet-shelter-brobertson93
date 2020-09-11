@@ -1,20 +1,134 @@
 package shelter;
 
+import java.util.Scanner;
+
 public class VirtualPet {
+
     String name;
-    int hunger = 100;
-    int thirst = 100;
-    int boredom = 100;
-    int tiredness = 100;
+    String description;
+    int hunger;
+    int thirst;
+    int boredom;
+    int tiredness;
+
+    public VirtualPet(String nameInput, String descriptionInput, int hungerInput, int thirstInput, int boredomInput, int tirednessInput) {
+
+        this.name = nameInput;
+        this.description = descriptionInput;
+        this.hunger = hungerInput;
+        this.thirst = thirstInput;
+        this.boredom = boredomInput;
+        this.tiredness = tirednessInput;
+
+    }
 
 
     public void printAttributes() {
         VirtualPetsContainer d = VirtualPetsContainer.getInstance();
-        System.out.println("Name     | Hunger | Thirst | Boredom");
+        int numberOfCharacters = 0;
+         for (int i = 0; i < d.array.size(); i++) {
+
+             if (numberOfCharacters < d.array.get(i).name.length()){
+                 numberOfCharacters = d.array.get(i).name.length();
+             }
+
+
+
+         }
+        System.out.print("Name");
+         for (int i = 0 ; i < numberOfCharacters; i++) {
+             System.out.print(" ");
+         }
+
+        System.out.println("| Hunger | Thirst | Boredom | Tiredness");
+        //System.out.println("Name     | Hunger | Thirst | Boredom");
+
+
+       // if (d.array.get(i).name.length() != numberOfCharacters) {
+         //   int numberOfSpaces = numberOfCharacters - d.array.get(i).name.length();
+
+        //}
 
         for (int i = 0; i < d.array.size(); i++) {
+            if (d.array.get(i).name.length() != numberOfCharacters) {
+                int numberOfSpaces = numberOfCharacters - d.array.get(i).name.length();
+                System.out.print((i + 1) + ": " + d.array.get(i).name);
 
-            System.out.println((i + 1) + ": " + d.array.get(i).name + "|" + d.array.get(i).hunger + "|" + d.array.get(i).thirst + "|" + d.array.get(i).boredom + "|" + d.array.get(i).tiredness); // prints out pet names
+                    for (int k = 0; k < numberOfSpaces; k++) {
+                        System.out.print(" ");
+                    }
+
+            }
+            else {
+                System.out.print((i + 1) + ": " + d.array.get(i).name);
+            }
+
+            System.out.print(" |");
+            if (String.valueOf(d.array.get(i).hunger).length() == 3) {
+                System.out.print("  " + d.array.get(i).hunger + "   |");
+            }
+
+            else if(String.valueOf(d.array.get(i).hunger).length() == 2) {
+                System.out.print("  " + d.array.get(i).hunger + "    |");
+            }
+            else if(String.valueOf(d.array.get(i).hunger).length() == 1) {
+                System.out.print("  " + d.array.get(i).hunger + "     |");
+            }
+
+            if (String.valueOf(d.array.get(i).thirst).length() == 3) {
+                System.out.print("  " + d.array.get(i).thirst + "   |");
+            }
+
+            else if(String.valueOf(d.array.get(i).thirst).length() == 2) {
+                System.out.print("   " + d.array.get(i).thirst + "   |");
+            }
+            else if(String.valueOf(d.array.get(i).thirst).length() == 1) {
+                System.out.print("    " + d.array.get(i).thirst + "     |");
+            }
+
+            if (String.valueOf(d.array.get(i).boredom).length() == 3) {
+                System.out.print("  " + d.array.get(i).boredom + "    |");
+            }
+
+            else if(String.valueOf(d.array.get(i).boredom).length() == 2) {
+                System.out.print("   " + d.array.get(i).boredom + "    |");
+            }
+            else if(String.valueOf(d.array.get(i).boredom).length() == 1) {
+                System.out.print("    " + d.array.get(i).boredom + "      |");
+            }
+
+            if (String.valueOf(d.array.get(i).tiredness).length() == 3) {
+                System.out.println("  " + d.array.get(i).tiredness + "   ");
+            }
+
+            else if(String.valueOf(d.array.get(i).tiredness).length() == 2) {
+                System.out.println("   " + d.array.get(i).tiredness + "   ");
+            }
+            else if(String.valueOf(d.array.get(i).tiredness).length() == 1) {
+                System.out.println("    " + d.array.get(i).tiredness + "     ");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //  System.out.print(" |  ");
+         //   System.out.format("%4d",d.array.get(i).hunger);
+
+
+           // System.out.println("|  " + d.array.get(i).thirst + "    |  " + d.array.get(i).boredom + "     |  " + d.array.get(i).tiredness); // prints out pet names
 
         }
 
@@ -107,6 +221,32 @@ public class VirtualPet {
 
 
 
+    }
+
+    public void arraySize() {
+        VirtualPetsContainer pet = VirtualPetsContainer.getInstance();
+        Scanner input2 = new Scanner(System.in);
+        if (pet.array.size() == 0) {
+
+          /* VirtualPet newPet = new VirtualPet();
+
+            System.out.println("Please enter your new pet's name:");
+            newPet.name = input2.nextLine();
+            System.out.println("Please describe your new pet:");
+            newPet.description = input2.nextLine();
+            System.out.println("Please enter your new pet's hunger");
+            newPet.hunger = input2.nextInt();
+            System.out.println("Please enter your new pet's thirst");
+            newPet.thirst = input2.nextInt();
+            System.out.println("Please enter your new pet's boredom");
+            newPet.boredom = input2.nextByte();
+            System.out.println("Please enter your new pet's tiredness");
+            newPet.tiredness = input2.nextInt();
+
+
+            pet.array.add(newPet);*/
+
+        }
     }
 
 

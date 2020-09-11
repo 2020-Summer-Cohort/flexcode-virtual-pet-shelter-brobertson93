@@ -24,6 +24,8 @@ public class VirtualPetsContainer {
 	        array = new ArrayList<>(); //creates array list of pets that can be accessed globally
 			arrayDead = new ArrayList<>();
 
+
+
 	    }
 
 
