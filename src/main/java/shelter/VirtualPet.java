@@ -252,7 +252,6 @@ public class VirtualPet {
     public boolean petStatus() {
         VirtualPetsContainer pets = VirtualPetsContainer.getInstance();
         if (hunger < 0) {
-            System.out.println("");
             System.out.println("***" + name + " died from hunger!***"); //lets you know which pet died from a particular attribute hitting < 0
             pets.arrayDead.add(name);
 
@@ -260,41 +259,30 @@ public class VirtualPet {
 
 
         } else if (hunger < 40) {
-            System.out.println("");
             System.out.println("***" + name + " is dying from hunger!***"); // warns that a pet is getting closed to dying
-            System.out.println("");
         }
 
         if (thirst < 0) {
-            System.out.println("");
             System.out.println("***" + name + " died from  thirst!***");
             return false;
 
         } else if (thirst < 40) {
-            System.out.println("");
             System.out.println("***" + name + " is dying from thirst!***"); // warns that a pet is getting closed to dying
-            System.out.println("");
         }
         if (tiredness < 0) {
-            System.out.println("");
             System.out.println("***" + name + " died from tiredness!***");
             return false;
 
         } else if (tiredness < 40) {
-            System.out.println("");
             System.out.println("***" + name + " is dying from tiredness!***"); // warns that a pet is getting closed to dying
-            System.out.println("");
         }
 
         if (boredom < 0) {
-            System.out.println("");
             System.out.println("***" + name + " died from boredom!***");
             return false;
 
         } else if (boredom < 40) {
-            System.out.println("");
             System.out.println("***" + name + " is dying from boredom!***"); // warns that a pet is getting closed to dying
-            System.out.println("");
         }
         return true;
 

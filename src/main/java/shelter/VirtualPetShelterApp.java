@@ -61,10 +61,14 @@ class VirtualPetShelterApp {
             try {
                 //  VirtualPet sizeCheck = new VirtualPet();
                 //sizeCheck.arraySize();
+
                 if (d.array.size() == 0) {
                     System.out.println("The Shelter is empty!");
+
                     System.out.println("Please enter a new pet name");
                     String name = input2.nextLine();
+                    name  = input2.nextLine();
+
                     System.out.println("Please enter your pets description");
                     String description = input2.next();
 
@@ -97,6 +101,30 @@ class VirtualPetShelterApp {
                 System.out.println("");
 
                 while (true) {
+                    if (d.array.size() == 0) {
+                        Scanner input = new Scanner(System.in);
+
+                        System.out.println("The Shelter is empty!");
+                        System.out.println("Please enter a new pet name");
+                        String name = input.nextLine();
+                        System.out.println("Please enter your pets description");
+                        String description = input.next();
+
+                        input.nextLine();
+                        System.out.println("Please enter your pets hunger");
+                        int hunger = input.nextInt();
+                        System.out.println("Please enter your pets thirst");
+                        int thirst = input.nextInt();
+                        System.out.println("Please enter your pets boredom");
+                        int boredom = input.nextInt();
+                        System.out.println("Please enter your pets tiredness");
+                        int tiredness = input.nextInt();
+
+                        VirtualPet pets = new VirtualPet(name, description, hunger, thirst, boredom, tiredness);
+                        d.array.add(pets);
+
+
+                    }
                     // String name = d.array.get(selection).name;
                     System.out.println("Please make a selection:");
 
@@ -125,25 +153,27 @@ class VirtualPetShelterApp {
 
                     } else if (answer == 2) {
 
-                            if (d.array.size() == 0) {
-                                System.out.println("The Shelter is empty!");
-                                System.out.println("Please enter a new pet name");
-                                String name = input2.nextLine();
-                                System.out.println("Please enter your pets description");
-                                String description = input2.next();
+                        if (d.array.size() == 0) {
+                            Scanner input = new Scanner(System.in);
 
-                                input2.nextLine();
-                                System.out.println("Please enter your pets hunger");
-                                int hunger = input2.nextInt();
-                                System.out.println("Please enter your pets thirst");
-                                int thirst = input2.nextInt();
-                                System.out.println("Please enter your pets boredom");
-                                int boredom = input2.nextInt();
-                                System.out.println("Please enter your pets tiredness");
-                                int tiredness = input2.nextInt();
+                            System.out.println("The Shelter is empty!");
+                            System.out.println("Please enter a new pet name");
+                            String name = input.nextLine();
+                            System.out.println("Please enter your pets description");
+                            String description = input.next();
 
-                                VirtualPet pets = new VirtualPet(name, description, hunger, thirst, boredom, tiredness);
-                                d.array.add(pets);
+                            input.nextLine();
+                            System.out.println("Please enter your pets hunger");
+                            int hunger = input.nextInt();
+                            System.out.println("Please enter your pets thirst");
+                            int thirst = input.nextInt();
+                            System.out.println("Please enter your pets boredom");
+                            int boredom = input.nextInt();
+                            System.out.println("Please enter your pets tiredness");
+                            int tiredness = input.nextInt();
+
+                            VirtualPet pets = new VirtualPet(name, description, hunger, thirst, boredom, tiredness);
+                            d.array.add(pets);
                                 break;
                             }
                             for (int i = 0; i < d.array.size(); i++) {
@@ -214,21 +244,37 @@ class VirtualPetShelterApp {
                             input2.close();
                             Runtime.getRuntime().exit(0);
                         } else if (answer == 7) {
-                            System.out.println("Please enter the corresponding number for the pet you want to adopt:");
+                            System.out.println("Please enter the corresponding name for the pet you want to adopt:");
                             for (int i = 0; i < d.array.size(); i++) {
 
                                 System.out.println((i + 1) + ": " + d.array.get(i).name + " - " + d.array.get(i).description);
 
                             }
-                            int test = input2.nextInt() - 1;
-                            d.array.remove(test);
-                            break;
-
-                        } else if (answer == 8) {
                             input2.nextLine();
+                            String petDelete = input2.nextLine();
+                            if (d.array.size() == 1 && d.array.get(0).name == petDelete) {
+
+                                d.array.remove(0);
+
+
+                            }
+                       else {
+                                for (int i = 0; i < d.array.size(); i++) {
+
+                                    if (petDelete.equals(d.array.get(i).name)) {
+                                        d.array.remove(i);
+
+                                        break;
+                                    }
+                                }
+                            }
+                        } else if (answer == 8) {
+
 
                             System.out.println("Please enter a new pet name");
-                            String name = input2.nextLine();
+                            String name;
+                        name = input2.nextLine();
+                        name = input2.nextLine();
                             System.out.println("Please enter your pets description");
                             String description = input2.next();
 
