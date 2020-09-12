@@ -1,6 +1,5 @@
 package shelter;
 
-import java.util.Scanner;
 
 public class VirtualPet {
 
@@ -223,12 +222,12 @@ public class VirtualPet {
 
     }
 
-    public void arraySize() {
+  /*  public void arraySize() {
         VirtualPetsContainer pet = VirtualPetsContainer.getInstance();
         Scanner input2 = new Scanner(System.in);
         if (pet.array.size() == 0) {
 
-          /* VirtualPet newPet = new VirtualPet();
+           VirtualPet newPet = new VirtualPet();
 
             System.out.println("Please enter your new pet's name:");
             newPet.name = input2.nextLine();
@@ -244,10 +243,10 @@ public class VirtualPet {
             newPet.tiredness = input2.nextInt();
 
 
-            pet.array.add(newPet);*/
+            pet.array.add(newPet);
 
         }
-    }
+    }*/
 
 
     public boolean petStatus() {
