@@ -18,7 +18,7 @@ public class TimeIncrementer extends Thread {
 	           
 	            }
 
-	            //petStatus here?
+
 	            try {
 
 	                Thread.sleep(6000); //increments increase by 4 seconds each time the while loop is ran

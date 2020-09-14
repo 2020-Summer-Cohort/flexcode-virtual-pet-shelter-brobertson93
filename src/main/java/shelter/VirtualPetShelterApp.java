@@ -34,12 +34,6 @@ class VirtualPetShelterApp {
 
         for (int i = 0; i < pets; i++) {
 
-        //    VirtualPet newPet = new VirtualPet();
-
-         //   newPet.name = input.nextLine();
-
-        //   newPet.description = input.nextLine();
-          //  d.array.add(newPet); // creates a new object of the class Pet and pushes it into the singleton
             System.out.println("Please enter pet name!");
          String name = input.nextLine();
             System.out.println("Please enter your pet's description!");
@@ -59,8 +53,7 @@ class VirtualPetShelterApp {
 
         while (d.running) {
             try {
-                //  VirtualPet sizeCheck = new VirtualPet();
-                //sizeCheck.arraySize();
+
 
                 if (d.array.size() == 0) {
                     System.out.println("The Shelter is empty!");
@@ -89,13 +82,7 @@ class VirtualPetShelterApp {
                 }
                 System.out.println("This is the status of your pets:");
                 System.out.println("");
-             /*   System.out.println("Name     | Hunger | Thirst | Boredom");
 
-                for (int i = 0; i < d.array.size(); i++) {
-
-                    System.out.println((i + 1) + ": " + d.array.get(i).name + "|" + d.array.get(i).hunger + "|" + d.array.get(i).thirst + "|" + d.array.get(i).boredom); // prints out pet names
-
-                }*/
 
 
                 System.out.println("");
@@ -125,7 +112,7 @@ class VirtualPetShelterApp {
 
 
                     }
-                    // String name = d.array.get(selection).name;
+
                     System.out.println("Please make a selection:");
 
 
@@ -133,13 +120,7 @@ class VirtualPetShelterApp {
 
 
                     int answer = input2.nextInt();
-                /*if (d.arrayDead.contains(name)){
 
-                    System.out.println("This pet is no longer in the shelter, please select another pet");
-                    System.out.println("");
-                    break;
-
-                }*/
                     if (answer == 1) { // compares user input to selectable options
                         if (d.array.size() == 0) {
 

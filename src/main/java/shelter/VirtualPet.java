@@ -40,13 +40,7 @@ public class VirtualPet {
          }
 
         System.out.println("| Hunger | Thirst | Boredom | Tiredness");
-        //System.out.println("Name     | Hunger | Thirst | Boredom");
 
-
-       // if (d.array.get(i).name.length() != numberOfCharacters) {
-         //   int numberOfSpaces = numberOfCharacters - d.array.get(i).name.length();
-
-        //}
 
         for (int i = 0; i < d.array.size(); i++) {
             if (d.array.get(i).name.length() != numberOfCharacters) {
@@ -123,18 +117,11 @@ public class VirtualPet {
 
 
 
-            //  System.out.print(" |  ");
-         //   System.out.format("%4d",d.array.get(i).hunger);
 
-
-           // System.out.println("|  " + d.array.get(i).thirst + "    |  " + d.array.get(i).boredom + "     |  " + d.array.get(i).tiredness); // prints out pet names
 
         }
 
-        /*System.out.println("Hunger: " + hunger);//prints out all the options for interacting with the pet
-        System.out.println("Thirst: " + thirst);
-        System.out.println("Boredom: " + boredom);
-        System.out.println("Tiredness: " + tiredness);*/
+
 
         System.out.println("");
         System.out.println("1: Feed all of the pets");
@@ -222,31 +209,7 @@ public class VirtualPet {
 
     }
 
-  /*  public void arraySize() {
-        VirtualPetsContainer pet = VirtualPetsContainer.getInstance();
-        Scanner input2 = new Scanner(System.in);
-        if (pet.array.size() == 0) {
 
-           VirtualPet newPet = new VirtualPet();
-
-            System.out.println("Please enter your new pet's name:");
-            newPet.name = input2.nextLine();
-            System.out.println("Please describe your new pet:");
-            newPet.description = input2.nextLine();
-            System.out.println("Please enter your new pet's hunger");
-            newPet.hunger = input2.nextInt();
-            System.out.println("Please enter your new pet's thirst");
-            newPet.thirst = input2.nextInt();
-            System.out.println("Please enter your new pet's boredom");
-            newPet.boredom = input2.nextByte();
-            System.out.println("Please enter your new pet's tiredness");
-            newPet.tiredness = input2.nextInt();
-
-
-            pet.array.add(newPet);
-
-        }
-    }*/
 
 
     public boolean petStatus() {
